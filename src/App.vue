@@ -22,12 +22,14 @@ export default class App extends Vue {}
 	margin: 0;
 	padding: 0;
 }
+body {
+	background-color: #2d2d32;
+}
 #app {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #fff;
-	background-color: #2d2d32;
 	padding: 40px 0;
 }
 </style>
