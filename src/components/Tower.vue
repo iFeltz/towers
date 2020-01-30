@@ -1,7 +1,7 @@
 <template>
 	<div class="tower">
 		<div class="tower__title">{{ item.title }}</div>
-		<div class="tower__filling">{{ `${fillingPercentage}%` }}</div>
+		<div class="tower__value">{{ `${fillingPercentage}%` }}</div>
 		<div
 			:class="['tower__status-bar', { 'bg-error': !isProperlyLoaded }]"
 		></div>
@@ -106,6 +106,10 @@
 				</defs>
 			</svg>
 		</div>
+    
+		<div class="tower__title">Масса карналита</div>
+		<div class="tower__value">{{ this.item.value }}</div>
+		<div class="tower__status-bar"></div>
 	</div>
 </template>
 
@@ -156,10 +160,10 @@ export default class Tower extends Vue {
 	text-align: center;
 
 	&__title {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
-	&__filling {
+	&__value {
 		font-size: 26px;
 	}
 
@@ -169,5 +173,9 @@ export default class Tower extends Vue {
 		height: 3px;
 		background-color: #21b149;
 	}
+
+  &__body {
+    margin-bottom: 10px;
+  }
 }
 </style>
