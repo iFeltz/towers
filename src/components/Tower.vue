@@ -108,7 +108,7 @@
 		</div>
     
 		<div class="tower__title">Масса карналита</div>
-		<div class="tower__value">{{ this.item.value }}</div>
+		<input class="tower__value" v-model="item.value">
 		<div class="tower__status-bar"></div>
 	</div>
 </template>
@@ -165,6 +165,12 @@ export default class Tower extends Vue {
 
 	&__value {
 		font-size: 26px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    color: #fff;
 	}
 
 	&__status-bar {
